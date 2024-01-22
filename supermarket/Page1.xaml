@@ -1,0 +1,47 @@
+﻿<Page x:Class="supermarket.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:supermarket"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page1">
+
+    <Grid Background="Azure">
+        <ComboBox HorizontalAlignment="Left" Margin="84,43,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem>
+                بسكويت
+            </ComboBoxItem>
+            <ComboBoxItem>
+                شيبسي
+            </ComboBoxItem>
+        </ComboBox>
+        <TextBox Name="name" HorizontalAlignment="Left" Margin="535,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="pri" HorizontalAlignment="Left" Margin="535,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox Name="ma" HorizontalAlignment="Left" Margin="535,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="ex" HorizontalAlignment="Left" Margin="535,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="amo" HorizontalAlignment="Left" Margin="535,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label FontSize="15" Content=": اسم المونتج" HorizontalAlignment="Left" Margin="660,32,0,0" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.5,0.5"/>
+        <Label FontSize="15" Content=": تاريخ انتاج المونتج" HorizontalAlignment="Left" Margin="660,73,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.5,0.5"/>
+        <Label FontSize="15" Content=": تاريخ انتهاء المونتج" HorizontalAlignment="Left" Margin="658,110,0,0" VerticalAlignment="Top" Width="134" RenderTransformOrigin="0.5,0.5"/>
+        <Label FontSize="15" Content=": الكميه" HorizontalAlignment="Left" Margin="660,147,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.5,0.5"/>
+        <Label FontSize="15" Content=": السعر" HorizontalAlignment="Left" Margin="660,182,0,0" VerticalAlignment="Top" Width="59" RenderTransformOrigin="0.5,0.5"/>
+        <Button Content="اضافه" HorizontalAlignment="Center" Margin="0,73,0,0" VerticalAlignment="Top" Height="27" Width="71" Click="Button_Click"/>
+        <Button Content="مسح" HorizontalAlignment="Left" Margin="258,73,0,0" VerticalAlignment="Top" Height="27" Width="71"/>
+        <Button Content="تعديل" HorizontalAlignment="Center" Margin="0,117,0,0" VerticalAlignment="Top" Height="27" Width="72"/>
+        <Button Content="البحث" HorizontalAlignment="Left" Margin="258,118,0,0" VerticalAlignment="Top" Height="27" Width="71"/>
+        <DataGrid Name="dg" Margin="0,225,0,0" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*" x:Name="cname" Header="الاسم" Binding="{Binding Path=NAMEE}" />
+                <DataGridTextColumn Width="*" Header="تاريخ الانتاج" Binding="{Binding DATEA}" />
+                <DataGridTextColumn Width="*" Header="تاريخ الانتهاء" Binding="{Binding DATEE}" />
+                <DataGridTextColumn Width="*" Header="الكميه" Binding="{Binding AMOUNT}" />
+                <DataGridTextColumn Width="*" Header="السعر" Binding="{Binding PRICE}" />
+                <DataGridTextColumn Width="*" Header="نوع المنتج" Binding="{Binding KIND}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Name="prl" Content="" HorizontalAlignment="Left" Margin="84,125,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>

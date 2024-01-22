@@ -1,0 +1,45 @@
+﻿<Page x:Class="supermarket.fatora"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:supermarket"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="fatora">
+
+    <Grid Background="Azure">
+
+        <ComboBox HorizontalAlignment="Left" Margin="335,42,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem>
+                بسكويت
+            </ComboBoxItem>
+            <ComboBoxItem>
+                شيبسي
+            </ComboBoxItem>
+        </ComboBox>
+        <TextBox Name="id" HorizontalAlignment="Left" Margin="535,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="name" HorizontalAlignment="Left" Margin="535,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label FontSize="15" Content=": رقم المونتج" HorizontalAlignment="Left" Margin="660,32,0,0" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.5,0.5"/>
+        <Label FontSize="15" Content=":  اسم المونتج" HorizontalAlignment="Left" Margin="660,73,0,0" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.5,0.5"/>
+        <Button Content="اضافه" HorizontalAlignment="Left" Margin="660,130,0,0" VerticalAlignment="Top" Height="28" Width="72" Click="Button_Click_2" />
+        <Button Content="مسح" HorizontalAlignment="Left" Margin="546,130,0,0" VerticalAlignment="Top" Height="28" Width="71" Click="Button_Click_4" />
+        <DataGrid Name="dg" Margin="0,225,0,0" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="*" x:Name="cname" Header="الرقم" Binding="{Binding ID}" />
+                <DataGridTextColumn Width="*" Header="الاسم" Binding="{Binding NAMEE}" />
+                <DataGridTextColumn Width="*" Header="الكميه" Binding="{Binding AMOUNT}" />
+                <DataGridTextColumn Width="*" Header="السعر" Binding="{Binding PRICE}" />
+                <DataGridTextColumn Width="*" Header="نوع المنتج" Binding="{Binding KIND}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Name="prl" Content="" HorizontalAlignment="Left" Margin="84,125,0,0" VerticalAlignment="Top"/>
+        <TextBox IsEnabled="False" Name="fa" HorizontalAlignment="Left" Margin="169,73,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Height="108"/>
+
+        <TextBox IsEnabled="False" Text="0" HorizontalAlignment="Left" Margin="359,91,0,0" TextWrapping="Wrap" x:Name="counterTextBox" Width="100" Height="30"  VerticalAlignment="Top"/>
+        <Button Content="+"   HorizontalAlignment="Left" VerticalAlignment="Top"  Height="23" Width="40" Margin="359,125,0,0" Click="Button_Click_1"/>
+        <Button Content="-"  HorizontalAlignment="Left" VerticalAlignment="Top"  Height="23" Width="40" Margin="419,125,0,0" Click="Button_Click"/>
+        <Button Content="اتمام عملية الشراء" HorizontalAlignment="Left" Margin="546,173,0,0" VerticalAlignment="Top" Height="30" Width="186" Click="Button_Click_3"/>
+
+    </Grid>
+</Page>
